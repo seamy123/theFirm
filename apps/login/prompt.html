@@ -1,0 +1,64 @@
+<html>
+<title>Prompt</title>
+<head>
+    <style>
+        * {
+            font-family: Tahoma, Ariel, sans-serif;
+            font-size: 11px;
+        }
+        body {
+            background-color: Menu;
+            padding: 10px;
+        }
+        input[type=button] {
+            background-color: ButtonFace;
+        }
+    </style>
+</head>
+<body onload="Init()">
+<table id="prompt" cellspacing="7" padding="0" width="100%" border="0">
+    <tr>
+        <td rowspan="2" valign="top" width="28">
+            <img src="Images/prompt.gif" width="28" height="26">
+        </td>
+        <td id="prompt_text" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="100%"><input id="value" type="text" style="width: 100%" onKeyPress="PressEnter()"></td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <input type="button" value="OK"
+                   style="width: 65px; padding: 2px;"
+                   onClick="OK()">
+            <input type="button" value="Cancel"
+                   style="width: 65px; padding: 2px; margin-left: 10px"
+                   onClick="Cancel()">
+        </td>
+    </tr>
+</table>
+<script>
+    function Init() {
+        // Use this to place the key in the corresponding field, if it has already been entered
+        var key = GetCookie('key');
+        if (key != null) // Place it where it belongs
+                }
+
+
+    function OK() {
+        window.returnValue = document.getElementById('value').value;
+        window.close();
+    }
+
+    function PressEnter() {
+        if (event.keyCode == 13) OK();
+        if (event.keyCode == 27) Cancel();
+    }
+
+    function Cancel () {
+        window.returnValue = null;
+        window.close();
+    }
+</script>
+</body>
+</html>
