@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="home.js"></script>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row" align="center">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-login">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h1 class="header-nightsky hero">Home</h1>
+                    </div>
+
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="row" style="padding: 15px" align="center">
+
+                   <button onclick="changeUrl('btnSearchJobs')" id="btnSearchJobs" class="btn btn-primary btn-block">Search Jobs</button>
+
+                    </div>
+
+                    <div class="row btn-group-lg"  style="padding: 15px"  align="center">
+
+                        <button class="btn-default col-lg-6" onclick="changeUrl('btnSavedJobs')" id="btnSavedJobs">Saved Jobs</button>
+
+                        <button class="btn-default col-lg-6"   onclick="changeUrl('btnJobAlerts')" id="btnJobAlerts" >Job Alerts</button>
+
+
+                    </div>
+
+                    <div class="row btn-group-lg" style="padding: 15px" align="center">
+
+                        <button class="btn-default col-lg-6" onclick="changeUrl('btnEditProfile')" id="btnEditProfile">Edit Profile/Status</button>
+
+                        <button class="btn-default col-lg-6" onclick="changeUrl('btnContactUs')" id="btnContactUs">Contact Us</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+
+</html>
