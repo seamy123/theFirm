@@ -17,8 +17,8 @@ function changeUrl(url) {
         case 'btnSearchJobs':window.location.replace("http://stackoverflow.com"); break;
         case 'btnSavedJobs': window.location.replace("http://stackoverflow.com"); break;
         case 'btnJobAlerts':window.location.replace("http://stackoverflow.com"); break;
-        case 'btnEditProfile': window.location.replace("http://stackoverflow.com"); break;
-        case 'btnContactUs': window.location.replace("http://stackoverflow.com"); break;
+        case 'btnEditProfile': window.location.replace("http://localhost/The_Firm/apps/editProfile/index.html"); break;
+        case 'btnContactUs': window.location.replace("http://localhost/The_Firm/apps/contactUs/index.html"); break;
     }
 
 }

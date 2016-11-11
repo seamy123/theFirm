@@ -1,70 +1,92 @@
 
 
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<link rel="stylesheet" href="css/mycss.css"/> 
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	
-<title></title>	
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/css/login.css">
 </head>
-
-
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3 class="text-center">Edit Profile</h3>                                    
+                <form id="register-form" action="../../php/editProfile.php" method="post" role="form" style="display: block;">
+                    <div class="form-group">
+                        <input type="text" name="fname" id="firstName" tabindex="1" class="form-control" placeholder="First Name:" value="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lname" id="lastName" tabindex="1" class="form-control" placeholder="Last Name:" value="">
+                     </div>
+                      <div class="form-group">
+                           <input type="number" name="phone" id="phone" tabindex="1" class="form-control" placeholder="Telephone:" value="">
+                      </div>
+                      <div class="form-group">
+                         <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                       </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                                </div>
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label><input type="radio" name="status" value="1" checked="checked">I am actively seeking work</label>
+                                    </div>
+                                    <div class="radio">
+                                         <label><input type="radio" name="status" value="2">I am not actively seeking work</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="status" value="3">I do not wish to be contacted</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-job-category">Select your job category:</label>
+                                    <select class="form-control" name="category" id="select-job-category">
+                                        <option value="1">General Manager</option>
+                                        <option value="2">Assistant Manager</option>
+                                        <option value="3">Sales/Event Manger</option>
+                                        <option value="4">Catering Manger</option>
+                                        <option value="5">HR Manger</option>
+                                        <option value="6">Restaurant Manger</option>
+                                        <option value="7">Bar Manger</option>
+                                        <option value="8">Accommodation Manger</option>
+                                        <option value="9">Front Office Manger</option>
+                                        <option value="10">Accounts</option>
+                                        <option value="11">Head Chef</option>
+                                        <option value="12">Chef</option>
+                                        <option value="13">Sous Chef</option>
+                                        <option value="14">Pastry Chef</option>
+                                        <option value="15">Chef de Partie</option>
+                                        <option value="16">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <input type="submit" name="edit-submit" id="edit-submit" tabindex="4" class="form-control btn btn-register" value="Update Profile"></br>
+                                            <input type="submit" id="delete-submit" name="delete-submit" class="form-control btn btn-register"value="Delete Profile">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                  
+                                
+        </div>
+    </div>
+</div>
 
-	<div id="container"	>
-		<div data-role="page" id="home"> 
-			<div class="form">
-				<h3>Edit Profile</h3>
-  				<form method="post" id="editForm" action="php/editProfile.php"  data-ajax="false"> 
-  				<label for="fname" class="ui-hidden-accessible">First name:</label>
-       			<input type="text" name="fname"  placeholder="First Name"  data-clear-btn="true">
-      			<label for="lname" class="ui-hidden-accessible">Last name:</label>
-       			<input type="text" name="lname"  placeholder="Last Name"  data-clear-btn="true">
-     		    <label for="phone" class="ui-hidden-accessible">Phone:</label>
-       			<input type="text" name="phone"  placeholder="Phone"  >
-       			<label for="email" class="ui-hidden-accessible">E-mail:</label>
-       			<input type="email" name="email"  placeholder="E-mail"  data-clear-btn="true">
-       			<label for="password" class="ui-hidden-accessible">Password:</label>
-       			<input type="password" name="pword" id="pword" placeholder="Password"  data-clear-btn="true">
-
-       			<fieldset data-role="controlgroup">
-          			<legend>Choose status:</legend>
-       				<label for="status-1">Actively seeking work</label>
-       				<input type="radio" name="status" id="status-1" value="1" checked="checked" >
-       				<label for="status-2">Not actively seeking work</label>
-       				<input type="radio" name="status" id="status-2" value="2" >
-       				<label for="status-3">Do not wish to be contacted</label>
-       				<input type="radio" name="status" id="status-3" value="3" >
-       			</fieldset>		      				
-       		
-     		    <input type="submit" id="editBtn" name="update" value="Update">			
-   				<input type="submit" id="deleteBtn" name="delete" value="Delete Profile">
-  				</form>
-  			</div>
-		</div>
-		
-
-	
-
-
-	</div><!--container -->
-
-	
-
-	
-
-
-
+<p id="demo"></p>
 
 
 </body>
+
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="editProfile.js"></script>
+
 
 
 </html>
