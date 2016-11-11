@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/mycss.css"/> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	
+<title></title>	
+</head>
+
+
+<body>
+
+	<div id="container"	>
+		<div data-role="page" id="home"> 
+			<div class="form">
+				<h3>Edit Profile</h3>
+  				<form method="post" id="editForm" action="php/editProfile.php"  data-ajax="false"> 
+  				<label for="fname" class="ui-hidden-accessible">First name:</label>
+       			<input type="text" name="fname"  placeholder="First Name"  data-clear-btn="true">
+      			<label for="lname" class="ui-hidden-accessible">Last name:</label>
+       			<input type="text" name="lname"  placeholder="Last Name"  data-clear-btn="true">
+     		    <label for="phone" class="ui-hidden-accessible">Phone:</label>
+       			<input type="text" name="phone"  placeholder="Phone"  >
+       			<label for="email" class="ui-hidden-accessible">E-mail:</label>
+       			<input type="email" name="email"  placeholder="E-mail"  data-clear-btn="true">
+       			<label for="password" class="ui-hidden-accessible">Password:</label>
+       			<input type="password" name="pword" id="pword" placeholder="Password"  data-clear-btn="true">
+
+       			<fieldset data-role="controlgroup">
+          			<legend>Choose status:</legend>
+       				<label for="status-1">Actively seeking work</label>
+       				<input type="radio" name="status" id="status-1" value="1" checked="checked" >
+       				<label for="status-2">Not actively seeking work</label>
+       				<input type="radio" name="status" id="status-2" value="2" >
+       				<label for="status-3">Do not wish to be contacted</label>
+       				<input type="radio" name="status" id="status-3" value="3" >
+       			</fieldset>		      				
+       		
+     		    <input type="submit" id="editBtn" name="update" value="Update">			
+   				<input type="submit" id="deleteBtn" name="delete" value="Delete Profile">
+  				</form>
+  			</div>
+		</div>
+		
+
+	
+
+
+	</div><!--container -->
+
+	
+
+	
+
+
+
+
+
+</body>
+
+
+</html>
