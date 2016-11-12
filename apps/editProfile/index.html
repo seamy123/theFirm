@@ -12,20 +12,26 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <h3 class="text-center">Edit Profile</h3>                                    
-                <form id="register-form" action="../../php/editProfile.php" method="post" role="form" style="display: block;">
-                    <div class="form-group">
-                        <input type="text" name="fname" id="firstName" tabindex="1" class="form-control" placeholder="First Name:" value="">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="lname" id="lastName" tabindex="1" class="form-control" placeholder="Last Name:" value="">
-                     </div>
-                      <div class="form-group">
-                           <input type="number" name="phone" id="phone" tabindex="1" class="form-control" placeholder="Telephone:" value="">
-                      </div>
-                      <div class="form-group">
-                         <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-                       </div>
+            <div class="panel panel-login">
+                <div class="panel-heading">
+                    <h3 class="text-center">Edit Profile</h3> 
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">                                               
+                            <form id="register-form" action="../../php/editProfile.php" method="post" role="form" style="display: block;">
+                                <div class="form-group">
+                                     <input type="text" name="fname" id="firstName" tabindex="1" class="form-control" placeholder="First Name:" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="lname" id="lastName" tabindex="1" class="form-control" placeholder="Last Name:" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" name="phone" id="phone" tabindex="1" class="form-control" placeholder="Telephone:" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                                </div>
                                 <div class="form-group">
                                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                 </div>
@@ -34,10 +40,10 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="radio">
-                                        <label><input type="radio" name="status" value="1" checked="checked">I am actively seeking work</label>
+                                         <label><input type="radio" name="status" value="1" checked="checked">I am actively seeking work</label>
                                     </div>
                                     <div class="radio">
-                                         <label><input type="radio" name="status" value="2">I am not actively seeking work</label>
+                                        <label><input type="radio" name="status" value="2">I am not actively seeking work</label>
                                     </div>
                                     <div class="radio">
                                         <label><input type="radio" name="status" value="3">I do not wish to be contacted</label>
@@ -67,14 +73,16 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">
-                                            <input type="submit" name="edit-submit" id="edit-submit" tabindex="4" class="form-control btn btn-register" value="Update Profile"></br>
+                                            <input type="submit" name="edit-submit" id="edit-submit" tabindex="4" class="form-control btn btn-register" value="Update Profile">
                                             <input type="submit" id="delete-submit" name="delete-submit" class="form-control btn btn-register"value="Delete Profile">
-                                        </div>
-                                    </div>
+                                         </div>
+                                     </div>
                                 </div>
-                            </form>
-                  
-                                
+                             </form>
+                        </div>
+                    </div>
+                </div>     
+           </div>                     
         </div>
     </div>
 </div>
